@@ -5,7 +5,7 @@ const Bodies = Matter.Bodies;
 var engine, world;
 var box1, pig1;
 var backgroundImg,platform;
-
+var boxrectangular;
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
 }
@@ -21,6 +21,7 @@ function setup(){
 
     box1 = new Box(700,320,70,70);
     box2 = new Box(920,320,70,70);
+    boxrectangular =  new Box(870,270,70,90);
     pig1 = new Pig(810, 350);
     log1 = new Log(810,260,300, PI/2);
 
@@ -46,6 +47,7 @@ function draw(){
     console.log(box2.body.angle);
     box1.display();
     box2.display();
+    boxrectangular.display();
     ground.display();
     pig1.display();
     log1.display();
